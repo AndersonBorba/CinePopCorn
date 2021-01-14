@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinePopCorn", "CinePopCorn\CinePopCorn.csproj", "{E626C041-6D76-40C8-82D4-E0FED85F8128}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinePopCorn.Domain", "CinePopCorn.Domain\CinePopCorn.Domain.csproj", "{307D04B9-B1B8-40C9-96F4-D64AA54C743A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinePopCorn.infrastructure", "CinePopCorn.infrastructure\CinePopCorn.infrastructure.csproj", "{99144F82-D8E2-4425-B312-323A447A720E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinePopCorn.Application", "CinePopCorn.Application\CinePopCorn.Application.csproj", "{0FEF238E-0130-4303-B928-372300F74F38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinePopCornTest", "CinePopCornTest\CinePopCornTest.csproj", "{73ABE656-6AAF-4CAC-81C2-A4FD5AF3EAE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E626C041-6D76-40C8-82D4-E0FED85F8128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E626C041-6D76-40C8-82D4-E0FED85F8128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E626C041-6D76-40C8-82D4-E0FED85F8128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E626C041-6D76-40C8-82D4-E0FED85F8128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{307D04B9-B1B8-40C9-96F4-D64AA54C743A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307D04B9-B1B8-40C9-96F4-D64AA54C743A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307D04B9-B1B8-40C9-96F4-D64AA54C743A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307D04B9-B1B8-40C9-96F4-D64AA54C743A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99144F82-D8E2-4425-B312-323A447A720E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99144F82-D8E2-4425-B312-323A447A720E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99144F82-D8E2-4425-B312-323A447A720E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99144F82-D8E2-4425-B312-323A447A720E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FEF238E-0130-4303-B928-372300F74F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FEF238E-0130-4303-B928-372300F74F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FEF238E-0130-4303-B928-372300F74F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FEF238E-0130-4303-B928-372300F74F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73ABE656-6AAF-4CAC-81C2-A4FD5AF3EAE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73ABE656-6AAF-4CAC-81C2-A4FD5AF3EAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73ABE656-6AAF-4CAC-81C2-A4FD5AF3EAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73ABE656-6AAF-4CAC-81C2-A4FD5AF3EAE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
