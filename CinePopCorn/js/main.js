@@ -17,6 +17,7 @@
         }
     });
 
+
     $("[id=idfind2]").on('keyup', function () {
         for (var i = 1; i < $(document.querySelector("#gvSessions > tbody"))[0].childNodes.length; i++) {
             for (var j = 1; j < 7; j++) {
