@@ -2,15 +2,45 @@
 (function ($) {
     "use strict";
 
-    $(document).ready(function () {
-        $('#gvMovies').DataTable();
+    $("[id=idfind]").on('keyup', function () {
+        for (var i = 1; i < $(document.querySelector("#gvMovies > tbody"))[0].childNodes.length; i++) {
+            for (var j = 1; j < 4; j++) {
+                var a = $($($(document.querySelector("#gvMovies > tbody"))[0].childNodes[i])[0].childNodes[j])[0].innerHTML
+                if (a.indexOf($("#idfind")[0].value) > -1) {
+                    $($(document.querySelector("#gvMovies > tbody"))[0].childNodes[i]).show();
+                    break;
+                }
+                else {
+                    $($(document.querySelector("#gvMovies > tbody"))[0].childNodes[i]).hide();
+                }
+            }
+        }
     });
 
-    $(document).ready(function () {
-        $('#myTable').DataTable();
+    $("[id=idfind2]").on('keyup', function () {
+        for (var i = 1; i < $(document.querySelector("#gvSessions > tbody"))[0].childNodes.length; i++) {
+            for (var j = 1; j < 7; j++) {
+                var a = ($($(document.querySelector("#gvSessions > tbody"))[0].childNodes[i])[0].childNodes)[j].innerHTML
+                if (a.indexOf($("#idfind2")[0].value) > -1) {
+                    $($(document.querySelector("#gvSessions > tbody"))[0].childNodes[i]).show();
+                    break;
+                }
+                else {
+                    $($(document.querySelector("#gvSessions > tbody"))[0].childNodes[i]).hide();
+                }
+            }
+        }
     });
 
     $("[id*=idmovie]").change(function () {
+        changeDateEnd();
+    });
+
+    $("[id*=iddate]").change(function () {
+        changeDateEnd();
+    });
+
+    function changeDateEnd() {
         var minutes = parseInt(document.getElementById("idmovie")[document.getElementById("idmovie").selectedIndex].text.split('/')[1]);
         var dtFim = new Date(document.getElementById("iddate").value);
         dtFim.setMinutes(dtFim.getMinutes() + minutes);
@@ -24,65 +54,8 @@
         var minutes = dtFim.getMinutes();
         var minutesF = (minutes.toString().length == 1) ? '0' + minutes : minutes;
         document.getElementById("idfimsessao").value = anoF + "-" + mesF + "-" + diaF + "T" + hourF + ":" + minutesF;
-    });
+    };
 
-    /* ================================================== */
-    $("[id*=chkHeaderSelecionar]").on("click", function () {
-        var chkHeader = $(this);
-        var grid = $(this).closest("table");
-        $("input[type=checkbox]", grid).each(function () {
-            if (chkHeader.is(":checked")) {
-                if ($(this)[0].id.indexOf('chkRowSelecionar') > -1) {
-                    $(this).prop('checked', true);
-                }
-            } else if ($(this)[0].id.indexOf('chkRowSelecionar') > -1) {
-                $(this).prop('checked', false)
-            }
-        });
-    });
-
-    $("[id*=chkRowSelecionar]").on("click", function () {
-        var grid = $(this).closest("table");
-        var chkHeader = $("[id*=chkHeader]", grid);
-        if (!$(this).is(":checked")) {
-            chkHeader.prop('checked', false);
-        } else {
-            if ($("[id*=chkRow]", grid).length == $("[id*=chkRow]:checked", grid).length) {
-                chkHeader.prop('checked', 'checked');
-            }
-        }
-    });
-
-    /*Function no load of page*/
-    //$(document).ready(function () {
-    //    if ($('#HiddenFieldIdToken')[0].value === "D64E8A03-084D-4B08-9173-41E6E572D1DA" || $('#HiddenFieldIdToken')[0].value === "39598A74-DD1D-4B2F-8AB4-FDA16D69E90B" || $('#HiddenFieldIdToken')[0].value === "9D25F049-0593-4EAF-A0E8-08AE5C1D8113") {
-    //        $('.OcultarDadosParaConfiguracao').show();
-    //    }
-    //    else {
-    //        $('.OcultarDadosParaConfiguracao').remove();
-    //    }
-
-    //    if ($('#HiddenFieldIdToken')[0].value === "23F6A751-3829-4BCA-954F-033801248B28" || $('#HiddenFieldIdToken')[0].value === "034DC098-08CF-4440-90A6-BD3B3A47B59E" || $('#HiddenFieldIdToken')[0].value === "5B20CD6B-9461-4865-9920-5C19195D606F" || $('#HiddenFieldIdToken')[0].value === "AAFEDE05-4BEB-4C00-BA8E-E2904F1CD1F3") {
-    //        $('.OcultarContatos').show();
-    //        $('.OcultarEmail').remove();
-    //    }
-    //    else
-    //        $('.OcultarContatos').remove();
-
-    //    if ($('#HiddenFieldIdToken')[0].value != "F3B79B66-0853-4C7B-900F-FB9BE2E92505") {
-    //        $("[id*=chkHeaderSelecionar]").prop('checked', true);
-    //        $("[id*=chkRowSelecionar]").prop('checked', true);
-    //    }
-
-    //    $("#idcep").mask("99.999-999");
-    //    $("#idcnpj").mask("99.999.999/9999-99");
-    //    $("#cnpjempresaconjugadaid").mask("99.999.999/9999-99");
-    //    $("#idtelefonecelularcontato").mask("(99) 99999-9999");
-
-    //    if (sessionStorage.scrollTop != "undefined") {
-    //        $(window).scrollTop(sessionStorage.scrollTop);
-    //    }
-    //});
 
     $(window).scroll(function () {
         sessionStorage.scrollTop = $(this).scrollTop();
@@ -101,17 +74,6 @@
             }
         })
     })
-
-    //$('.validate-input .js-select2').each(function () {
-    //    $(this).on('change', function () {
-    //        if (validate(this) == false) {
-    //            showValidate(this);
-    //        }
-    //        else {
-    //            $(this).parent().addClass('true-validate');
-    //        }
-    //    })
-    //})
 
     /*==================================================================
     [ Validate ]*/
@@ -139,10 +101,6 @@
                 }
             }
         }
-
-
-
-
         return check;
     });
 
@@ -155,7 +113,6 @@
     });
 
     function validate(input) {
-
         if ($(input).attr('type') == 'idcnpj' || $(input).attr('name') == 'idcnpj') {
 
             if ($(input).val() == '' || $(input).val() == null) {
@@ -177,23 +134,7 @@
                 $($("#dividcnpj")[0])[0].dataset.validate = 'CNPJ incorreto!!!'
                 return false;
             }
-
             return true;
-        }
-
-        if ($(input).attr('type') == 'idinscricaoestadual' || $(input).attr('name') == 'idinscricaoestadual' || $(input).attr('type') == 'idnumeroendereco' || $(input).attr('name') == 'idnumeroendereco' || $(input).attr('type') == 'idquantidade' || $(input).attr('name') == 'idquantidade') {
-            return !isNaN(parseFloat($(input).val())) && isFinite($(input).val());
-        }
-
-        if ($(input).attr('name') == 'idenvionfe' || $(input).attr('name') == 'idemailjuridico' || $(input).attr('name') == 'idemail') {
-            if ($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-                return false;
-            }
-        }
-        else {
-            if ($(input).val().trim() == '') {
-                return false;
-            }
         }
     }
 
@@ -215,7 +156,5 @@
         $(thisAlert).removeClass('alert-validate');
         $(thisAlert).find('.btn-hide-validate').remove();
     }
-
-
 
 })(jQuery);

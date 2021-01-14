@@ -44,7 +44,7 @@
                 <button id="Button4" runat="server" text="Sessões" class="contact100-form-btn" onclick="window.location.href='/Sessions.aspx'">Sessões</button>
             </div>
             <div style="float: right; width: 8%">
-                <input runat="server" class="contact100-form-btn" type="image" src="images/logout32x32.png" onclick="window.location.href='/Login.aspx'"/>
+                <input runat="server" class="contact100-form-btn" type="image" src="images/logout32x32.png" onclick="window.location.href = '/Login.aspx'" />
             </div>
         </div>
         <div class="wrap-contact100">
@@ -52,10 +52,16 @@
                 <span class="contact100-form-title">Filmes</span>
 
                 <div style="float: left; width: 10%">
-                    <asp:Button id="btnAddMovie" runat="server" text="+" class="contact100-form-btn" OnClick="btnAddMovie_Click" style="font-size:40px;"></asp:Button>
+                    <asp:Button ID="btnAddMovie" runat="server" Text="+" class="contact100-form-btn" OnClick="btnAddMovie_Click" Style="font-size: 40px;"></asp:Button>
                     </br>
                 </div>
-                
+
+                <div style="float: right; width: 30%">
+                    <div class="wrap-input100 bg1">
+                        <asp:TextBox id="idfind" runat="server" class="input100"></asp:TextBox>
+                    </div>
+                </div>
+
 
                 <div class="wrap-input100 input100-select bg1">
                     <asp:GridView GridLines="None" BorderColor="#f7f7f7" ID="gvMovies"
@@ -92,7 +98,7 @@
     </div>
 
 
-    
+
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendor/jquery/jquery.mask.js"></script>

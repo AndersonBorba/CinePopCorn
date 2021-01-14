@@ -44,7 +44,7 @@
                 <button id="Button4" runat="server" text="Sessões" class="contact100-form-btn" onclick="window.location.href='/Sessions.aspx'">Sessões</button>
             </div>
             <div style="float: right; width: 8%">
-                <input runat="server" class="contact100-form-btn" type="image" src="images/logout32x32.png" onclick="window.location.href='/Login.aspx'"/>
+                <input runat="server" class="contact100-form-btn" type="image" src="images/logout32x32.png" onclick="window.location.href = '/Login.aspx'" />
             </div>
         </div>
         <div class="wrap-contact100">
@@ -54,6 +54,11 @@
                 <div style="float: left; width: 10%">
                     <asp:Button ID="btnAddSession" runat="server" Text="+" class="contact100-form-btn" OnClick="btnAddSession_Click" Style="font-size: 40px;"></asp:Button>
                     </br>
+                </div>
+                <div style="float: right; width: 30%">
+                    <div class="wrap-input100 bg1">
+                        <asp:TextBox ID="idfind2" runat="server" class="input100"></asp:TextBox>
+                    </div>
                 </div>
 
 
