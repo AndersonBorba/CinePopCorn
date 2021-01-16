@@ -47,6 +47,25 @@ namespace CinePopCorn.infrastructure.Movies
             return result;
         }
 
+        public Movie GetMovieByTitle(string title)
+        {
+            Movie m = new Movie();
+            SqlConnection connection = new SqlConnection(AuxDAO.GetConnectionString());
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = @"select Id, Title, Description, Time from Movie where title = @Title";
+            cmd.Parameters.AddWithValue("@Title", title);
+            SqlDataReader rdr = cmd.ExecuteReader();
+            if (rdr.Read())
+            {
+                m.Id = Convert.ToInt32(rdr["Id"]);
+                m.Title = Convert.ToString(rdr["Title"]);
+                m.Time = Convert.ToInt32(rdr["Time"]);
+            }
+            connection.Close();
+            return m;
+        }
+
         public int GetRepeatedTitles(string title, int id)
         {
             SqlConnection connection = new SqlConnection(AuxDAO.GetConnectionString());

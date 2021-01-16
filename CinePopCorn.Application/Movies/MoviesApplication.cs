@@ -43,6 +43,11 @@ namespace CinePopCorn.Application.Movies
             return result;
         }
 
+        public Movie GetMovieByTitle(string title)
+        {
+            return dao.GetMovieByTitle(title);
+        }
+
         public Movie GetMovieById(object idMovie)
         {
             return dao.GetMovieById(idMovie);
