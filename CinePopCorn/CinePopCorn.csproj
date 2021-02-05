@@ -189,7 +189,6 @@
     <Content Include="images\edit24x24.png" />
     <Content Include="images\icons\favicon.ico" />
     <Content Include="images\img-01.png" />
-    <Content Include="js\CallWSMIDAS.js" />
     <Content Include="js\main.js" />
     <Content Include="Login.aspx" />
     <Content Include="Rooms.aspx" />
