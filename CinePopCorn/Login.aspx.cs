@@ -18,7 +18,7 @@ namespace CinePopCorn
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
 
-            if (idemail.Value == "admin@printwayy.com" & idsenha.Value == "1234")
+            if (idemail.Value == "exactsales@tech.com" & idsenha.Value == "@1234&")
                 Page.Session["logado"] = true;
             else
             {
