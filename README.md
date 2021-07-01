@@ -8,6 +8,6 @@ Deve fazer o Restoring dos pacotes.</br>
 arquivo está neste mesmo projeto.
 5. Na mesma classe AuxDAO.cs atualize o caminho físico onde serão salvos as capas dos filmes,(\CinePopCorn\images\movies) por exemplo:
 I:\PROJECTS\CINE\CinePopCorn\images\movies
-6. Para logar no sistema utilize o e-mail: admin@printwayy.com e senha: 1234
+6. Para logar no sistema utilize o e-mail: exactsales@tech.com e senha: @1234&
 O sistema foi desenvolvido e testado utilizando o navegador Google Chrome.
 Obrigado!!!
