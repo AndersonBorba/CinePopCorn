@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinePopCorn", "CinePopCorn\CinePopCorn.csproj", "{E626C041-6D76-40C8-82D4-E0FED85F8128}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinePopCorn.Application", "CinePopCorn.Application\CinePopCorn.Application.csproj", "{0FEF238E-0130-4303-B928-372300F74F38}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinePopCornTest", "CinePopCornTest\CinePopCornTest.csproj", "{73ABE656-6AAF-4CAC-81C2-A4FD5AF3EAE7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinePopCorn.WebAPI", "SpotterAdm.WebAPI\CinePopCorn.WebAPI.csproj", "{346E2E5B-79C1-4AD7-AE9D-668EB6018A40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +41,15 @@ Global
 		{73ABE656-6AAF-4CAC-81C2-A4FD5AF3EAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73ABE656-6AAF-4CAC-81C2-A4FD5AF3EAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73ABE656-6AAF-4CAC-81C2-A4FD5AF3EAE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{346E2E5B-79C1-4AD7-AE9D-668EB6018A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{346E2E5B-79C1-4AD7-AE9D-668EB6018A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{346E2E5B-79C1-4AD7-AE9D-668EB6018A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{346E2E5B-79C1-4AD7-AE9D-668EB6018A40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94EF7186-174A-4C5E-9880-316F109AA749}
 	EndGlobalSection
 EndGlobal

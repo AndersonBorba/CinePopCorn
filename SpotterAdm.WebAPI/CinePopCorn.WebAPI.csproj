@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="DTO\**" />
+	  <Content Remove="DTO\**" />
+	  <EmbeddedResource Remove="DTO\**" />
+	  <None Remove="DTO\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\CinePopCorn.Domain\CinePopCorn.Domain.csproj" />
+	  <ProjectReference Include="..\CinePopCorn.infrastructure\CinePopCorn.infrastructure.csproj" />
+	</ItemGroup>
+
+</Project>

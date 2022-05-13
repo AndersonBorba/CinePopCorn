@@ -33,7 +33,6 @@
                 <input runat="server" class="contact100-form-btn" type="image" src="images/logout32x32.png" onclick="window.location.href='/Login.aspx'"/>
             </div>
         </div>
-
         <div class="wrap-contact100">
             <form runat="server" class="contact100-form validate-form">
                 <span class="contact100-form-title">Salas</span>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,20 @@ namespace CinePopCorn.infrastructure.AuxDao
     {
         static public string GetConnectionString()
         {
-            return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\aborba\source\repos\CinePopCorn-main\CinePopCorn.infrastructure\CinePopCorn.mdf;Integrated Security=True";
+            string connectionString = ConfigurationManager.ConnectionStrings["DbPopCorn"].ConnectionString;
+            return connectionString;
         }
 
         static public string GetPathImage()
         {
-            return @"C:\Users\aborba\source\repos\CinePopCorn-main\CinePopCorn\images\movies\";
+            string pathMovie = ConfigurationManager.AppSettings["PathMovies"];
+            return pathMovie;
+        }
+
+        static public string GetUrlApiLog()
+        {
+            string url = ConfigurationManager.AppSettings["UrlLogger"];
+            return url;
         }
     }
 }

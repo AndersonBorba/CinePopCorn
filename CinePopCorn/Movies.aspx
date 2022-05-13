@@ -20,6 +20,7 @@
 <body runat="server" class="container-contact100">
     <div>
         <div class="wrap-contact100header">
+
             <div style="float: left; width: 30%">
                 <button id="Button2" runat="server" text="Salas" class="contact100-form-btn" onclick="window.location.href='/Rooms.aspx'">Salas</button>
             </div>

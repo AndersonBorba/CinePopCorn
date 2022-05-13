@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\LoggerDTO.cs" />
+    <Compile Include="LOG\Log.cs" />
     <Compile Include="Movies\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rooms\Room.cs" />
